@@ -1,0 +1,7 @@
+.stylish-text {
+    color: red; /* First color */
+    background: linear-gradient(to right, blue, green, yellow); /* Three colors */
+    font-family: 'Cursive', sans-serif; /* Decorative font */
+    font-size: 2em; /* Size of the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
