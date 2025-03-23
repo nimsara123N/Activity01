@@ -1,0 +1,31 @@
+# Web Animation for Hacking Website
+
+// Create a simple animation effect for a hacking-themed website
+const body = document.querySelector('body');
+const hackerText = document.createElement('h1');
+hackerText.textContent = 'Hacking in Progress...';
+hackerText.style.color = 'green';
+hackerText.style.fontFamily = 'monospace';
+hackerText.style.textAlign = 'center';
+hackerText.style.position = 'absolute';
+hackerText.style.top = '50%';
+hackerText.style.left = '50%';
+hackerText.style.transform = 'translate(-50%, -50%)';
+body.appendChild(hackerText);
+
+let opacity = 0;
+let increasing = true;
+
+function animateText() {
+    if (increasing) {
+        opacity += 0.01;
+        if (opacity >= 1) increasing = false;
+    } else {
+        opacity -= 0.01;
+        if (opacity <= 0) increasing = true;
+    }
+    hackerText.style.opacity = opacity;
+    requestAnimationFrame(animateText);
+}
+
+animateText();
